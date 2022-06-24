@@ -3,14 +3,109 @@
 *{
     box-sizing: border-box;
     padding: 0;
+    margin: 0;
 }
 body{
     background-color: black;
     color: whitesmoke;
+    height: 100vh;
+    display:grid;
+    grid-template-areas: 
+    "header header header"
+    "aside main main"
+    "footer footer footer";
+    grid-template-rows: 5vh auto 5vh;
+    grid-template-columns: 25vh auto 5vh;
+    overflow: hidden;
+    transition: 1s;
 }
-h1{
-    font-family: 'Permanent Marker', cursive;
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    font-family: 'Permanent Marker';
 }
-p{
-    font-family: 'Signika Negative', sans-serif;
+aside{
+    grid-area: aside;
+    display: flex;
+    align-items: center;
+}
+li, a{
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    width: 150px;
+    font-family: 'Signika Negative';
+    font-weight: bolder;
+    transition: 0.5s;
+}
+li a:hover{
+    color:white;
+    font-size: 18px;
+    background-color: red;
+}
+li{
+    margin-top: 20px;
+}
+nav{
+    padding: 0px 10px;
+}
+main{
+    grid-area: main;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Signika Negative';
+    padding: 5vw 5vw;
+}
+#main_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.main_text{
+    padding: 5px;
+}
+#profile_image{
+    border-radius: 50%;
+    width: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Signika Negative';
+    color:red;
+}
+@media screen and (max-width: 560px) {
+    body{
+        overflow-y: scroll;
+    }
+    main{
+        padding: 2vh 3vh
+    }
+}
+@media screen and (max-width: 517px) {
+    body{
+        display:flex;
+        flex-direction: column;
+    }
+    nav{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    li{
+        margin:10px 10px
+    }
 }
