@@ -15,7 +15,7 @@ body{
     "aside main main"
     "footer footer footer";
     grid-template-rows: 5vh auto 5vh;
-    grid-template-columns: 25vh auto 5vh;
+    grid-template-columns: 20vh auto 5vh;
     overflow: hidden;
     transition: 1s;
 }
@@ -61,20 +61,21 @@ main{
     flex-direction: column;
     align-items: center;
     font-family: 'Signika Negative';
-    padding: 5vw 5vw;
+    padding: 5vw 0vw;
 }
 #main_text{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding:0px 5vw
 }
 .main_text{
     padding: 5px;
 }
 #profile_image{
     border-radius: 50%;
-    width: 250px;
+    width: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,27 +89,24 @@ footer{
     color:red;
 }
 @media screen and (max-width: 560px) {
+    body{
+        overflow-y: scroll;
+    }
     main{
         padding: 2vh 3vh
     }
 }
-@media screen and (max-width: 565px) {
+@media screen and (max-width: 570px) {
     body{
-        overflow-y: scroll;
         display:flex;
         flex-direction: column;
     }
-    /* #profile_image{
-        align-items: center;
-        justify-content: center;
-        margin: 0px;
-    } */
     nav{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
     li{
-        margin:10px 10px
+        margin:10px 20px
     }
 }
