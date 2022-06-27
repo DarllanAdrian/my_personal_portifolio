@@ -79,10 +79,7 @@ main{
 #techs{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
     padding:0vw 18vw;
-    /* text-align:center; */
     margin-top:5vh
 }
 span{
@@ -146,8 +143,5 @@ footer{
     }
     li{
         margin:1vw 1vw
-    }
-    #techs{
-        padding:0px 5vh 0px 0vw
     }
 }
