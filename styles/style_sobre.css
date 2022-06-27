@@ -74,13 +74,15 @@ main{
     display:flex;
     flex-direction:column;
     justify-content:center;
+    padding:0px 12vw
     /* align-items:center; */
 }
 #techs{
     display: flex;
     flex-direction: column;
     padding:0vw 18vw;
-    margin-top:5vh
+    margin-top:5vh;
+    text-align: center;
 }
 span{
     margin-left: 5px;
