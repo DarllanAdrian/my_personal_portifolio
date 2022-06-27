@@ -63,6 +63,9 @@ main{
     font-family: 'Signika Negative';
     padding: 5vw 5vw;
 }
+h1{
+    
+}
 #projects{
     display: flex;
     flex-direction: row;
