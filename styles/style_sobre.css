@@ -11,12 +11,11 @@ body{
     height: 100vh;
     display:grid;
     grid-template-areas: 
-    "header header header"
+    "aside header header"
     "aside main main"
-    "footer footer footer";
+    "aside footer footer";
     grid-template-rows: 5vh auto 5vh;
-    grid-template-columns: 20vh auto 5vh;
-    overflow: hidden;
+    grid-template-columns: 8vh auto 5vh;
     transition: 1s;
 }
 header{
@@ -29,6 +28,7 @@ aside{
     grid-area: aside;
     display: flex;
     align-items: center;
+    position: sticky;
 }
 li, a{
     background-color: white;
@@ -57,28 +57,59 @@ nav{
 main{
     grid-area: main;
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     font-family: 'Signika Negative';
     padding: 5vw 0vw;
 }
-#main_text{
+#personal_info{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding:0px 5vw
+    justify-content:center;
+    align-items:center;
+    padding:0;
 }
-.main_text{
-    padding: 5px;
+#envelop_code{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    /* align-items:center; */
 }
-#profile_image{
-    border-radius: 50%;
-    width: 30vh;
+#techs{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
+    padding:0vw 18vw;
+    /* text-align:center; */
+    margin-top:5vh
+}
+span{
+    margin-left: 5px;
+}
+abbr{
+    text-decoration: none;
+}
+.tech{
+    font-family: monospace;
+    font-weight: bold;
+    color:rgba(255, 78, 78, 0.766);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     align-items: center;
+    font-size: 25px;
+    border: solid red 2px;
+    border-left: solid red 2px;
+    margin: 2px;
+    border-radius: 5px;
+}
+#graphics{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    flex-wrap: wrap;
 }
 footer{
     grid-area: footer;
@@ -87,6 +118,11 @@ footer{
     align-items: center;
     font-family: 'Signika Negative';
     color:red;
+}
+@media screen and (max-width: 445px) {
+    #graphics{
+        width:260px
+    }
 }
 @media screen and (max-width: 560px) {
     body{
@@ -100,6 +136,8 @@ footer{
     body{
         display:flex;
         flex-direction: column;
+        justify-content: space-between;
+        /* padding: 0vw 0px 40vh 0vh; */
     }
     nav{
         display: flex;
@@ -107,6 +145,9 @@ footer{
         justify-content: center;
     }
     li{
-        margin:10px 20px
+        margin:1vw 1vw
+    }
+    #techs{
+        padding:0px 5vh 0px 0vw
     }
 }
