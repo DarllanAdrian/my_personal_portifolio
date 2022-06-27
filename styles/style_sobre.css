@@ -61,6 +61,7 @@ main{
     justify-content: center;
     align-items: center;
     font-family: 'Signika Negative';
+    padding: 5vw 0vw;
 }
 #personal_info{
     display: flex;
@@ -74,12 +75,13 @@ main{
     flex-direction:column;
     justify-content:center;
     padding:0px 12vw
+    /* align-items:center; */
 }
 #techs{
     display: flex;
     flex-direction: column;
     padding:0vw 18vw;
-    margin-top:2vh;
+    margin-top:5vh;
     text-align: center;
 }
 span{
